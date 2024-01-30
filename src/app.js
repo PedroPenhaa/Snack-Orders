@@ -1,9 +1,15 @@
-const MyNameApp = {
+const app = Vue.createApp({
     data() {
         return {
-            name: "Pedro"
+            name: "",
+            input_name: ""
+        };
+    },
+    methods: {
+        submitForm() {
+            this.name = this.input_name;
         }
     }
-}
+});
 
-Vue.createApp(MyNameApp).mount("#app");
+app.mount("#app");
