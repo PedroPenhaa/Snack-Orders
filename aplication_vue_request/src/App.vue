@@ -1,16 +1,23 @@
 <template>
-    <div>
-      <PrimeiroComponente/>
-    </div>
-  </template>
-  
-  <script>
-  import PrimeiroComponente from './components/PrimeiroComponente.vue'
-  
-  export default {
-    name: 'App',
-    components: {
-      PrimeiroComponente,
-    }
+  <div>
+    <NavBar />
+    <router-view />
+    <Footer />
+  </div>
+</template>
+
+<script>
+import NavBar from './components/NavBar.vue';
+import Footer from './components/Footer.vue';
+
+export default {
+  components: {
+    NavBar,
+    Footer
   }
-  </script>
+};
+</script>
+
+<style>
+/* Adicione estilos conforme necessário */
+</style>
