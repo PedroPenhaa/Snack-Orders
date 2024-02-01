@@ -1,7 +1,7 @@
 <template>
     <div class="nav">
         <router-link to="/" class="logo_url">
-    <img :src="logo" :alt="alt" id="logo">
+        <img :src="logo" :alt="alt" class="logo">
 </router-link>
         <router-link to = "/"> Home </router-link>
         <router-link to = "/pedidos"> Pedidos </router-link>
@@ -23,10 +23,28 @@
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    font-size: 20px;
 }
 
-.logo_url {
+.nav a{
+    color: #FCBA03;
+    text-decoration: none;
+    margin: 12px;
+    transition: 0.5s;
+}
+.nav a:hover{
+  color: #FFF;
+}
+
+.nav .logo_url {
     margin: auto;
     margin-left: 0;
 }
+
+.logo{
+    width: 50px;
+    height: 50px;
+}
+
+
 </style>
