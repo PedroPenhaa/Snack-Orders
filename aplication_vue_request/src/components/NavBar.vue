@@ -1,8 +1,8 @@
 <template>
     <div class="nav">
-        <router-link to="/">
-            <img src="" id="logo">
-         </router-link>
+        <router-link to="/" class="logo_url">
+    <img :src="logo" :alt="alt" id="logo">
+</router-link>
         <router-link to = "/"> Home </router-link>
         <router-link to = "/pedidos"> Pedidos </router-link>
     </div>
@@ -10,10 +10,23 @@
 
 <script>
     export default{
-        name:"NavBar"
+        name:"NavBar",
+        props:["logo", "alt"]
     }
 </script>
 
 <style scoped>
+.nav {
+    background-color: #222;
+    border-bottom: 4px solid #111;
+    padding: 15px 50px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
 
+.logo_url {
+    margin: auto;
+    margin-left: 0;
+}
 </style>
