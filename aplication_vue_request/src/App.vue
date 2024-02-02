@@ -1,12 +1,26 @@
 <template>
-  <div>
-    <NavBar :logo="logo_src" :alt="app_name" />
-    <router-view />
-    <Footer />
+ 
+ 
+ <div>
+
+<!-- Adicione isso ao cabeçalho do seu HTML -->
+
+
+
+    <NavBar :logo="logo_src" :alt="app_name"  v-if="criado"/>
+    <router-view v-if="criado"/>
+    <Footer v-if="criado"/>
+    
+    <div class="loader" v-if="!criado">
+      <i class="mdi mdi-loading mdi-spin" style="font-size: 48px;"></i>
+    </div>
   </div>
+
+  
 </template>
 
 <script>
+
 import NavBar from './components/NavBar.vue';
 import Footer from './components/Footer.vue';
 
@@ -17,15 +31,32 @@ export default {
   },
   data(){
     return{
+      criado: false,
       logo_src: "img/logo.png",
-
       app_name: "Monte seu Hamburguer"
     }
-  }
+  },
+  
+  mounted() {
+  // Use setTimeout dentro da função mounted
+  setTimeout(() => {
+    this.criado = true; // Change the comma to a semicolon
+  }, 3000);
+}
+
 };
 </script>
 
 <style>
+.loader{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+
 *{
   font-family: Helvetica;
   padding: 0;
