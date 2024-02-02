@@ -32,6 +32,7 @@
                           {{ carne.tipo }}
                         </option>
                     </select>
+                    
                 </div>
 
                 <div id="opcionais-container" class="input-container">
