@@ -1,6 +1,5 @@
 <template>
     <div>
-      
         <div>
             <form id="burger-form">
                 <div class="input-container">
@@ -14,7 +13,6 @@
                     >
                 </div>
 
-
                 <div class="input-container">
                     <label for="pao">Escolha o pão:</label>
                     <select name="pao" id="pao" v-model="pao">
@@ -26,7 +24,6 @@
                     </select>
                 </div>
 
-
                 <div class="input-container">
                     <label for="carne">Escolha a carne:</label>
                     <select name="carne" id="carne" v-model="carne">
@@ -35,7 +32,6 @@
                           {{ carne.tipo }}
                         </option>
                     </select>
-
                 </div>
 
                 <div id="opcionais-container" class="input-container">
@@ -91,7 +87,6 @@
     max-width: 400px;
     margin: 0 auto;
   }
-
   .input-container {
     display: flex;
     flex-direction: column;
@@ -119,24 +114,20 @@
   #opcionais-title {
     width: 100%;
   }
-
   .checkbox-container {
     display: flex;
     align-items: flex-start;
     width: 50%;
     margin-bottom: 20px;
   }
-
   .checkbox-container span,
   .checkbox-container input {
     width: auto;
   }
-
   .checkbox-container span {
     margin-left: 6px;
     font-weight: bold;
   }
-
   .submit-btn {
     background-color: #222;
     color:#fcba03;
@@ -148,7 +139,6 @@
     cursor: pointer;
     transition: .5s;
   }
-
   .submit-btn:hover {
     background-color: transparent;
     color: #222;
