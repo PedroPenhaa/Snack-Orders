@@ -18,16 +18,12 @@
         height: 640px;
         display: flex;
         align-items: center;
-
     }
-
     .main-banner h1{
         color: #FFF;
         text-align: center;
         font-size: 60px;
         background-color: #222;
         padding: 20px 60px;
-    }
-
-    
+    }    
 </style>
