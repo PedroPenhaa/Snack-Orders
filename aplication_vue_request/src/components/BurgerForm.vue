@@ -1,5 +1,6 @@
 <template>
     <div>
+      
         <div>
             <form id="burger-form">
                 <div class="input-container">
@@ -13,6 +14,7 @@
                     >
                 </div>
 
+
                 <div class="input-container">
                     <label for="pao">Escolha o pão:</label>
                     <select name="pao" id="pao" v-model="pao">
@@ -24,6 +26,7 @@
                     </select>
                 </div>
 
+
                 <div class="input-container">
                     <label for="carne">Escolha a carne:</label>
                     <select name="carne" id="carne" v-model="carne">
@@ -32,7 +35,7 @@
                           {{ carne.tipo }}
                         </option>
                     </select>
-                    
+
                 </div>
 
                 <div id="opcionais-container" class="input-container">
